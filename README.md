@@ -1,4 +1,6 @@
 # buildJetsonXavierKernel
+This work is based on Jetsonhack's solution on building kernel for TX2. I haven't tested on my Jetson Xavier yet, please let me know if there is any issue.
+
 Scripts to help build the 4.9 kernel and modules onboard the Jetson Xavier (L4T 31.0.1, JetPack ). For previous versions, visit the 'tags' section.
 
 <em><strong>Note:</strong> The kernel source version must match the version of firmware flashed on the Jetson. For example, the source for the 4.9 kernel here is matched with L4T 31.0.1. This kernel compiled using this source tree will not work with newer versions or older versions of L4T, only 31.0.1.</em>
