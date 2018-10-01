@@ -40,6 +40,8 @@ if [ -f /sys/module/tegra_fuse/parameters/tegra_chip_id ]; then
             JETSON_BOARD="TX1" ;;
         24)
             JETSON_BOARD="TX2" ;;
+        25)
+            JETSON_BOARD="Xavier" ;;
         *)
             JETSON_BOARD="UNKNOWN" ;;
     esac
@@ -64,7 +66,15 @@ if [ -f /etc/nv_tegra_release ]; then
 
     # Write version of jetpack installed
     # https://developer.nvidia.com/embedded/jetpack-archive
-    if [ "$JETSON_BOARD" = "TX2i" ] ; then 
+    if [ "$JETSON_BOARD" = "Xavier" ] ; then 
+        case $JETSON_L4T in
+            "31.0.1")
+                    JETSON_JETPACK="4.0" ;;
+            
+            *)
+               JETSON_JETPACK="UNKNOWN" ;;
+        esac  
+    elif [ "$JETSON_BOARD" = "TX2i" ] ; then 
         case $JETSON_L4T in
             "28.2.1")
                     JETSON_JETPACK="3.2.1" ;;
