@@ -3,8 +3,8 @@ apt-add-repository universe
 apt-get update
 apt-get install pkg-config -y
 cd /usr/src
-wget -N https://developer.download.nvidia.com/embedded/L4T/r28_Release_v2.1/public_sources.tbz2    
-# Here I have the question, I don't know which file I should download and where???
+wget -N https://developer.nvidia.com/embedded/dlc/l4t-sources-31-0-1  
+
 
 sudo tar -xvf public_sources.tbz2 public_release/kernel_src.tbz2
 tar -xvf public_release/kernel_src.tbz2
