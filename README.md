@@ -38,6 +38,11 @@ Special thanks to Raffaello Bonghi (https://github.com/rbonghi) for jetson_easy 
 Special thanks to Shreeyak (https://github.com/Shreeyak) for discussing alternatives to get source directly from NVIDIA git repositories.
 
 ### Release Notes
+Oct, 2018
+* vL4T31.0.1
+* L4T 31.0.1 (JetPack 4.0)
+** I am still working on this, please let me know if it works.
+
 July, 2018
 * vL4T28.2.1
 * L4T 28.2.1 (JetPack 3.2.1)
