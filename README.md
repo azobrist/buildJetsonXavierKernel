@@ -1,7 +1,7 @@
-# buildJetsonTX2Kernel
-Scripts to help build the 4.4.38 kernel and modules onboard the Jetson TX2 (L4T 28.2.1, JetPack 3.2.1). For previous versions, visit the 'tags' section.
+# buildJetsonXavierKernel
+Scripts to help build the 4.9 kernel and modules onboard the Jetson Xavier (L4T 31.0.1, JetPack ). For previous versions, visit the 'tags' section.
 
-<em><strong>Note:</strong> The kernel source version must match the version of firmware flashed on the Jetson. For example, the source for the 4.4.38 kernel here is matched with L4T 28.2.1. This kernel compiled using this source tree will not work with newer versions or older versions of L4T, only 28.2.1.</em>
+<em><strong>Note:</strong> The kernel source version must match the version of firmware flashed on the Jetson. For example, the source for the 4.9 kernel here is matched with L4T 31.0.1. This kernel compiled using this source tree will not work with newer versions or older versions of L4T, only 31.0.1.</em>
 
 As of this writing, the "official" way to build the Jetson TX2 kernel is to use a cross compiler on a Linux PC. This is an alternative which builds the kernel onboard the Jetson itself. These scripts will download the kernel source to the Jetson TX2, and then compile the kernel and selected modules. The newly compiled kernel can then be installed. The kernel sources and build objects consume ~3GB.
 
