@@ -7,7 +7,7 @@ echo "$JETSON_DESCRIPTION"
 echo "Jetpack $JETSON_JETPACK [L4T $JETSON_L4T]"
 
 # Check to make sure we're installing the correct kernel sources
-L4TTarget="31.1.0"
+L4TTarget="32.1.0"
 if [ $JETSON_L4T == $L4TTarget ] ; then
    echo "Getting kernel sources"
    sudo ./scripts/getKernelSourcesNoGUI.sh

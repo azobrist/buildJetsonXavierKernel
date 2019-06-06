@@ -1,0 +1,30 @@
+getKernelSources.sh:7: echo "Jetpack $JETSON_JETPACK [L4T $JETSON_L4T]"
+getKernelSources.sh:8: 
+getKernelSources.sh:9: # Check to make sure we're installing the correct kernel sources
+getKernelSources.sh:10:-L4TTarget="31.1.0"
+getKernelSources.sh:10:+L4TTarget="32.1.0"
+getKernelSources.sh:11: if [ $JETSON_L4T == $L4TTarget ] ; then
+getKernelSources.sh:12:    echo "Getting kernel sources"
+getKernelSources.sh:13:    sudo ./scripts/getKernelSources.sh
+getKernelSourcesNoGUI.sh:7: echo "Jetpack $JETSON_JETPACK [L4T $JETSON_L4T]"
+getKernelSourcesNoGUI.sh:8: 
+getKernelSourcesNoGUI.sh:9: # Check to make sure we're installing the correct kernel sources
+getKernelSourcesNoGUI.sh:10:-L4TTarget="31.1.0"
+getKernelSourcesNoGUI.sh:10:+L4TTarget="32.1.0"
+getKernelSourcesNoGUI.sh:11: if [ $JETSON_L4T == $L4TTarget ] ; then
+getKernelSourcesNoGUI.sh:12:    echo "Getting kernel sources"
+getKernelSourcesNoGUI.sh:13:    sudo ./scripts/getKernelSourcesNoGUI.sh
+scripts/getKernelSourcesNoGUI.sh:1: #!/bin/bash
+scripts/getKernelSourcesNoGUI.sh:2:-KERNEL_SRC=l4t-sources-31-1-0
+scripts/getKernelSourcesNoGUI.sh:2:+KERNEL_SRC=l4t-sources-32-1-0
+scripts/getKernelSourcesNoGUI.sh:3: apt-add-repository universe
+scripts/getKernelSourcesNoGUI.sh:4: apt-get update
+scripts/getKernelSourcesNoGUI.sh:5: apt-get install pkg-config -y
+scripts/jetson_variables.sh:68:     # https://developer.nvidia.com/embedded/jetpack-archive
+scripts/jetson_variables.sh:69:     if [ "$JETSON_BOARD" = "Xavier" ] ; then 
+scripts/jetson_variables.sh:70:         case $JETSON_L4T in
+scripts/jetson_variables.sh:71:+	    "32.1.0")
+scripts/jetson_variables.sh:72:+		    JETSON_JETPACK="4.2.0" ;;
+scripts/jetson_variables.sh:73: 	    "31.1.0")
+scripts/jetson_variables.sh:74: 		    JETSON_JETPACK="4.1.1" ;;
+scripts/jetson_variables.sh:75: 	    "31.0.1")

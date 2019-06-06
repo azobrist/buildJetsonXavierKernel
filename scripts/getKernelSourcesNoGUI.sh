@@ -1,5 +1,5 @@
 #!/bin/bash
-KERNEL_SRC=l4t-sources-31-1-0
+KERNEL_SRC=l4t-sources-32-1-0
 apt-add-repository universe
 apt-get update
 apt-get install pkg-config -y
